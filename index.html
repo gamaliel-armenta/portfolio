@@ -17,8 +17,8 @@
         <div class="logo">GA.</div>
         <div class="nav-links">
             <a href="#inicio" data-key="nav_home">Inicio</a>
+            <a href="#sobre-mi" data-key="nav_about">Sobre Mí</a> 
             <a href="#experiencia" data-key="nav_exp">Proyectos</a>
-            
             <button onclick="toggleTheme()" class="theme-btn">🌓</button>
         </div>
     </nav>
@@ -42,6 +42,40 @@
             </div>
         </section>
 
+<section id="sobre-mi" style="padding-top: 80px; margin-bottom: 60px;">
+    <h2 data-key="about_title" style="margin-bottom: 30px;">Conoce un poco más de mí</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        
+        <div class="glass-card" style="padding: 30px;">
+            <h3 style="color: var(--primary); margin-top: 0; font-size: 1.5rem;">El puente entre el Diseño y el Código</h3>
+            <p style="color: var(--text-dim); line-height: 1.7; margin-bottom: 15px;">
+                Como Ingeniero en Software, mi gran habilidad es que no solo diseño pantallas atractivas, sino que entiendo la estructura y viabilidad detrás de ellas. Esto me permite crear interfaces de usuario que son funcionales, accesibles y fáciles de implementar para el equipo de desarrollo (Frontend).
+            </p>
+            <p style="color: var(--text-dim); line-height: 1.7;">
+                <strong>Dato curioso:</strong> en mi tiempo libre me dedico a la producción y composición musical. He aprendido ritmo, composición y armonía; principios que aplico para crear "armonía visual" y flujos sin fricción en mis diseños UX.
+            </p>
+        </div>
+
+        <div class="glass-card" style="padding: 30px;">
+            <h3 style="color: var(--primary); margin-top: 0; font-size: 1.5rem;">Mi Stack de Herramientas</h3>
+            <p style="color: var(--text-dim); margin-bottom: 20px;">Mi perfil multidisciplinario me permite adaptarme a diferentes etapas del ciclo de vida del producto:</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <span class="fluent-badge">Figma</span>
+                <span class="fluent-badge">Diseño UI/UX</span>
+                <span class="fluent-badge">Prototipado Interactivo</span>
+                <span class="fluent-badge">Sistemas de Diseño</span>
+                <span class="fluent-badge">User Research</span>
+                
+                <span class="fluent-badge" style="background: rgba(48, 230, 66, 0.1); border-color: rgba(48, 230, 66, 0.3);">HTML / CSS / JS</span>
+                <span class="fluent-badge" style="background: rgba(48, 230, 66, 0.1); border-color: rgba(48, 230, 66, 0.3);">Desarrollo Frontend</span>
+                <span class="fluent-badge" style="background: rgba(48, 230, 66, 0.1); border-color: rgba(48, 230, 66, 0.3);">Git / GitHub</span>
+            </div>
+        </div>
+
+    </div>
+</section>
         <section id="experiencia">
             <h2 data-key="exp_title">Proyectos Tecnológicos</h2>
             <div class="grid" id="projects-container">
