@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamaliel Armenta | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Segoe+UI&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark"> <div class="liquid-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">GA.</div>
+        <div class="nav-links">
+            <a href="#inicio" data-key="nav_home">Inicio</a>
+            <a href="#experiencia" data-key="nav_exp">Proyectos</a>
+            <a href="#skills" data-key="nav_skills">Skills</a>
+            <a href="#formacion" data-key="nav_edu">Formación</a>
+            
+            <select id="langSelect" class="glass-select" onchange="changeLanguage()">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+                <option value="jp">JP</option>
+            </select>
+            
+            <button onclick="toggleTheme()" class="theme-btn">🌓</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="tag fluent-badge" data-key="hero_tag">Ingeniero en Software & UI/UX</div>
+            <h1>Gamaliel <br><span class="gradient-text">Armenta Pérez</span></h1>
+            
+            <div class="glass-card hero-card">
+                <p data-key="about_text">
+                    Ingeniero en Software enfocado en el Diseño UI/UX y la innovación educativa a través de la tecnología. Cuento con experiencia desarrollando software bajo arquitectura de 3 capas. Mi objetivo es aplicar el pensamiento crítico y el diseño centrado en el usuario para construir las herramientas digitales del futuro, optimizando flujos de trabajo mediante el uso estratégico de Inteligencia Artificial.
+                </p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:armentaperezgamaliel@gmail.com" class="fluent-btn">Email</a>
+                <a href="https://linkedin.com/in/gamaliel-armenta-perez-4bb998277" target="_blank" class="fluent-btn">LinkedIn</a>
+                <a href="https://github.com/gamaliel-armenta" target="_blank" class="fluent-btn">GitHub</a>
+                <span class="location-badge">📍 Ciudad Obregón, Sonora</span>
+            </div>
+        </section>
+
+        <section id="experiencia">
+            <h2 data-key="exp_title">Proyectos Tecnológicos</h2>
+            <div class="grid" id="projects-container">
+                </div>
+        </section>
+
+        </main>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="glass-modal" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal()">X</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer class="glass-footer">
+        <p>© 2026 Gamaliel Armenta Pérez</p>
+    </footer>
+
+<!-- Visor de imágenes (lightbox) -->
+<div id="imageModal" class="image-modal" onclick="closeImageModal()">
+    <span class="image-modal-close">&times;</span>
+    <img class="image-modal-img" id="imgDentroDelModal" src="" alt="Vista ampliada" onclick="event.stopPropagation()">
+</div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
