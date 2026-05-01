@@ -59,7 +59,6 @@ function changeLanguage() {
     // Lógica de idioma original aquí
 }
 
-/* --- FUNCIONES PARA EL VISOR DE IMÁGENES --- */
 function openImageModal(src) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('imgDentroDelModal');

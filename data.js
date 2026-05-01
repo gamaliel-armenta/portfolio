@@ -17,7 +17,7 @@ const projectData = {
         title: "Rediseño UI/UX - SIDIENE",
         tag: "2026 | Proyecto UX/UI",
         subtitle: "Modernización de Interfaz",
-        statusText: "En fase de wireframing",
+        statusText: "En fase de desarrollo de flujos",
         details: [
             "Investigación basada en datos de INEGI y flujos de trabajo reales.",
             "Diseño adaptado a colores institucionales de Sonora.",
@@ -25,8 +25,21 @@ const projectData = {
         ],
         caseStudyLink: "./case-studies/sidiene-ui.html", // <--- Enlace a tu página extra
         isCaseStudy: true
+    },
+        glaze_ui: {
+        title: "Diseño UI/UX - Glaze",
+        tag: "2025 | Proyecto UX/UI",
+        subtitle: "Desarrollo de propuesta de Interfaz",
+        statusText: "Terminado",
+        details: [
+            "Investigación basada en datos de INEGI y flujos de trabajo reales.",
+            "Diseño adaptado a colores institucionales de Sonora.",
+            "Enfoque profundo en accesibilidad web."
+        ],
+        caseStudyLink: "./case-studies/glaze-ui.html", // <--- Enlace a tu página extra
+        isCaseStudy: true
     }
-    // Añade el resto de tus proyectos aquí...
+
 };
 
 const translations = {
