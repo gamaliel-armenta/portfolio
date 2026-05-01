@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glaze | Caso de Estudio UI/UX</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Segoe+UI&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;800&family=Fuzzy+Bubbles:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <style>
         /* Estilos Adaptativos al Tema Claro/Oscuro (Actualizados) */
+
+        @font-face {
+            font-family: 'BM HANNA'; /* El nombre con el que la vas a invocar después */
+            src: url('../fonts/BM-HANNA.ttf.woff') format('woff2'); /* La ruta exacta a tu archivo */
+            font-weight: normal;
+            font-style: normal;
+        }
         .case-hero { text-align: center; padding: 100px 20px 40px; }
         .case-title { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; letter-spacing: -1px; }
         
@@ -45,6 +52,9 @@
             display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px dashed var(--glass-border);
         }
         .mockup-video { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-md); }
+
+                .design-system-preview { display: flex; gap: 20px; margin: 30px 0; flex-wrap: wrap; }
+        .design-card { flex: 1; min-width: 250px; }
     </style>
 </head>
 <body data-theme="dark">
@@ -97,9 +107,64 @@
 
         <article class="case-body">
             <h2>3. Sistema de Diseño Adaptativo</h2>
-            <p>Implementé un sistema de diseño bifásico. Para la <strong>vista del tutor</strong>, mantuvimos una estética profesional, oscura y analítica, utilizando la paleta violeta/magenta que denota tecnología y confianza. Para la <strong>vista del niño</strong>, los acentos de color se adaptan a un esquema más vibrante y lúdico, utilizando formas redondeadas para reducir la fricción cognitiva.</p>
-            <p>La vista del niño requiere un PIN para poder activar todas las funciones a las que este puede acceder, esto refleja que cada tutor debe de tener registrado a su hijo/a dentro de la aplicación.</p>
+            <p>Implementé un sistema de diseño bifásico. Para la <strong>vista del tutor</strong>, mantuvimos una estética profesional, oscura y analítica. Para la <strong>vista del niño</strong>, los acentos de color se adaptan a un esquema más vibrante y lúdico.</p>
 
+            <div class="design-system-preview">
+                <div class="glass-card design-card">
+                    <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;">Paleta de Colores</h4>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;">Vista del Niño</h4>
+                        <div style="display: flex; gap: 12px;">
+                            <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #23B0A7; box-shadow: var(--glass-shadow);" title="Teal lúdico"></div>
+                            <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #30E642; box-shadow: var(--glass-shadow);" title="Verde vibrante"></div>
+                            <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #D81E5B; box-shadow: var(--glass-shadow);" title="Magenta divertido"></div>
+                            <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #F0C808; box-shadow: var(--glass-shadow);" title="Amarillo energía"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;">Vista del Tutor</h4>
+                        <div style="display: flex; gap: 12px;">
+                            <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #363A39; box-shadow: var(--glass-shadow);" title="Neutral Dark"></div>
+                            <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #8D0733; box-shadow: var(--glass-shadow);" title="Deep Red"></div>
+                            <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #5438DC; box-shadow: var(--glass-shadow);" title="Tech Blue"></div>
+                            <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #CEBDB6; box-shadow: var(--glass-shadow);" title="Soft Sand"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card design-card">
+                    <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;">Tipografías</h4>
+                    
+                    <div style="margin-bottom: 25px; border-bottom: 1px solid var(--glass-border); padding-bottom: 20px;">
+                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;">Vista del Niño</h4>
+                        
+                        <div style="margin-bottom: 10px;">
+                            <h2 style="font-family: 'Fuzzy Bubbles', sans-serif; margin-bottom: 2px; font-weight: 700; font-size: 1.4rem; color: var(--text-main);">Fuzzy Bubbles</h2>
+                            <p style="font-family: 'Fuzzy Bubbles'; color: var(--text-dim); font-size: 0.85rem;">Aa Bb Cc Dd Ee Ff Gg</p>
+                            <p style="font-family: 'Fuzzy Bubbles'; color: var(--text-dim); font-size: 0.85rem;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                        
+                        <div>
+                            <h2 style="font-family: 'BM HANNA', sans-serif; margin-bottom: 2px; font-weight: 400; font-size: 1.4rem; color: var(--text-main);">BM HANNA</h2>
+                            <p style="font-family: 'BM HANNA'; color: var(--text-dim); font-size: 0.85rem;">Aa Bb Cc Dd Ee Ff Gg</p>
+                            <p style="font-family: 'BM HANNA'; color: var(--text-dim); font-size: 0.85rem;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0px; letter-spacing: 1px;">Vista del Tutor</h4>
+                        <div>
+                            <h2 style="font-family: 'Comfortaa', sans-serif; margin-bottom: 2px; font-weight: 600; font-size: 1.4rem; color: var(--text-main);">Comfortaa</h2>
+                            <p style="font-family: 'Comfortaa'; color: var(--text-dim); font-size: 0.85rem;">Aa Bb Cc Dd Ee Ff Gg</p>
+                            <p style="font-family: 'Comfortaa'; color: var(--text-dim); font-size: 0.85rem;">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+            
             <h2>4. Prototipado y Contraste de Vistas</h2>
             <p>El prototipo de alta fidelidad demuestra cómo la misma aplicación transforma su arquitectura de la información dependiendo del usuario logueado. Mientras el tutor tiene un panel de control jerárquico, el niño experimenta un carrusel inmersivo de aplicaciones y contenidos aprobados.</p>
 
