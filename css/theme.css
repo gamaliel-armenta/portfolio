@@ -1,0 +1,111 @@
+/* Variables actualizadas con enfoque Liquid Glass / Fluent UI */
+:root {
+  /* Se preservan tus colores de marca, acentos y fuentes intactos */
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --secondary: #891547;
+  --secondary-dark: #6f103b;
+  --accent-teal: #14b8a6;
+  --accent-amber: #f59e0b;
+  
+  --font-primary: 'Instrument Sans', sans-serif;
+  --font-secondary: 'Outfit', sans-serif;
+
+  /* Modificaciones Glassmorphism / Fluent */
+  --bg: #f3f4f6; /* Fondo base claro y limpio */
+  --text: #0f172a;
+  --text-dim: #475569;
+  
+  /* Capas de cristal translúcido (Apple Glass / Fluent Acrylic) */
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-bg-hover: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-blur: blur(20px) saturate(190%);
+  
+  /* Sombras y radios suavizados estilo Microsoft Fluent */
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --shadow-fluent: 0 8px 32px 0 rgba(15, 23, 42, 0.08), 
+                    0 1px 2px 0 rgba(255, 255, 255, 0.2) inset;
+  --transition-fluent: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  --bg: #0b0f19;
+  --text: #f8fafc;
+  --text-dim: #94a3b8;
+  
+  --glass-bg: rgba(15, 23, 42, 0.45);
+  --glass-bg-hover: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-fluent: 0 12px 40px 0 rgba(0, 0, 0, 0.3), 
+                    0 1px 1px 0 rgba(255, 255, 255, 0.05) inset;
+}
+
+/* Clases comunes aplicadas a los contenedores y rejillas de casos de estudio */
+.case-meta-grid, .glass-card, .mockup-container {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-fluent);
+  transition: var(--transition-fluent);
+}
+
+.case-meta-grid:hover, .glass-card:hover {
+  background: var(--glass-bg-hover);
+  transform: translateY(-2px);
+}
+
+/* Normalización de espaciados limpios (reemplazo de estilos inline) */
+.case-hero {
+  text-align: center;
+  padding: 120px 24px 60px;
+}
+.case-hero p {
+  color: var(--text-dim);
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 16px auto 0;
+}
+.case-hero-badge {
+  margin-bottom: 12px;
+}
+.design-system-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+.design-card {
+  padding: 32px;
+}
+.design-card h3, .design-card h4 {
+  margin-bottom: 24px;
+}
+.design-group {
+  margin-bottom: 24px;
+}
+.design-group:last-child {
+  margin-bottom: 0;
+}
+.color-row, .bioma-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.color-bubble, .bioma-bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-fluent);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.fluent-btn-nav {
+  padding: 8px 16px;
+}
+main.case-main-layout {
+  padding: 0 0 80px 0;
+}
