@@ -62,7 +62,7 @@ const projectData = {
       "Diseño adaptado a estudiantes y sus intereses.",
       "Construcción iterativa con enfoque comunitario."
     ],
-    caseStudyLink: "./case-studies/ed-geocraft.html",
+    caseStudyLink: "../404.html",
     isCaseStudy: true
   }
 };
@@ -313,11 +313,11 @@ const translations = {
       },
       section1: "1. Context and Problem",
       section1_text: "In early 2024, various interviews were held with directors and staff of the Department of Complementary Educational Services to address the management of incidents and files through physical means. I began developing a software-based solution as a team, an administration and management system inspired by other bureaucratic systems (currently discontinued) such as SICRES, but adapted to the needs collected during the interviews.",
-      section1_text2: "Among the main pain points of Prefects and Directors, the time-bound access to physical files and their non-standardized structure stand out.",
-      section1_quote: "\"I need something I can access to download student files and send them to my superiors immediately.\"",
+      section1_text2: "Among the main pain points of Prefects and Directors, the time-bound access to physical records and their non-standardized structure stand out.",
+      section1_quote: "\"I need something I can access to download student records and send them to my superiors immediately.\"",
       section2: "2. Research and Discoveries",
       section2_text: "Based on the institution's data, I traced the User Journey of a school prefect. It was shown that at least 30 minutes of their day were used to correct incident records written by teachers. Likewise, the roles involved within this solution expanded from Directors and Prefects to include the Social Worker and Teachers.",
-      section2_text2: "The terms 'Report' and 'File' were standardized to 'Incident' and 'Unique Incident File' respectively. This was done because the term 'Report' is used in development as a synonym for history, while in the educational sector it refers to a file detailing a misconduct with its severity level and a narrative of the event.",
+      section2_text2: "The terms 'Report' and 'Record' were standardized to 'Incident' and 'Unique Incident Record' respectively. This was done because the term 'Report' is used in development as a synonym for history, while in the educational sector it refers to a document detailing a misconduct with its severity level and a narrative of the event.",
       section3: "3. Design System and Identity",
       section3_text: "I implemented a design system based on the institutional colors detailed in the Brand Identity Manual of the Government of the State of Sonora. This, together with the digitization process of procedures and bureaucratic actions, showed potential for better assimilation by the target audience.",
       section3_text2: "The contrast of institutional colors was validated under WCAG 2.1 AA standard to prevent visual fatigue in teachers, ensuring the system is accessible and comfortable for prolonged use during the school day.",
