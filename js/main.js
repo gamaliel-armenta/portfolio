@@ -312,7 +312,7 @@ const translations = {
         platform: "Web App (Desktop)"
       },
       section1: "1. Context and Problem",
-      section1_text: "In early 2024, various interviews were held with directors and staff of the Department of Complementary Educational Services to address the management of incidents and files through physical means. I began developing a software-based solution as a team, an administration and management system inspired by other bureaucratic systems (currently discontinued) such as SICRES, but adapted to the needs collected during the interviews.",
+      section1_text: "In early 2024, various interviews were held with directors and staff of the Department of Complementary Educational Services to address the management of incidents and records through physical means. I began developing a software-based solution as a team, an administration and management system inspired by other bureaucratic systems (currently discontinued) such as SICRES, but adapted to the needs collected during the interviews.",
       section1_text2: "Among the main pain points of Prefects and Directors, the time-bound access to physical records and their non-standardized structure stand out.",
       section1_quote: "\"I need something I can access to download student records and send them to my superiors immediately.\"",
       section2: "2. Research and Discoveries",
