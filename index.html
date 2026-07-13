@@ -3,92 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gamaliel Armenta | Portfolio</title>
+  <title data-i18n="pageTitle">Gamaliel Armenta | Portfolio</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
   <!-- Estilos modulares -->
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/themes.css">
   <style>
-    /* Ajuste específico para foto lateral dentro del hero */
-    .hero-container {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .hero-photo {
-      flex: 1;
-      min-width: 180px;
-      max-width: 260px;
-      display: flex;
-      justify-content: center;
-    }
-    .photo-frame {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      max-width: 240px;
-      border-radius: 2rem;
-      background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
-      backdrop-filter: blur(12px);
-      border: 2px solid rgba(255,255,255,0.3);
-      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      overflow: hidden;
-    }
-    .photo-frame i {
-      font-size: 4rem;
-      color: var(--text-secondary, #555);
-    }
-    .photo-frame span {
-      font-size: 0.8rem;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(4px);
-      padding: 0.3rem 0.8rem;
-      border-radius: 40px;
-      color: white;
-      font-family: 'Instrument Sans', sans-serif;
-    }
-    /* Contenido textual del hero */
-    .hero-content {
-      flex: 2;
-      min-width: 260px;
-      text-align: center;
-    }
-    /* Para que el contenido principal siga centrado en móvil */
-    @media (max-width: 768px) {
-      .hero-container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-photo {
-        margin-bottom: 1rem;
-      }
-      .hero-content {
-        text-align: center;
-      }
-    }
-    /* Ajuste hover */
-    .photo-frame:hover {
-      transform: scale(1.02);
-      border-color: var(--primary-color, #7c3aed);
-      box-shadow: 0 25px 40px rgba(0,0,0,0.2);
-    }
-    /* Tema oscuro */
-    [data-theme="dark"] .photo-frame {
-      border-color: rgba(255,255,255,0.2);
-      background: rgba(20,20,30,0.5);
-    }
-    [data-theme="dark"] .photo-frame i {
-      color: #ccc;
-    }
+    /* ... tus estilos ... */
+    .hero-container { display: flex; gap: 3rem; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .hero-photo { flex: 1; min-width: 180px; max-width: 260px; display: flex; justify-content: center; }
+    .photo-frame { width: 100%; aspect-ratio: 1/1; max-width: 240px; border-radius: 2rem; background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05)); backdrop-filter: blur(12px); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 20px 35px -10px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; overflow: hidden; }
+    .photo-frame i { font-size: 4rem; color: var(--text-secondary, #555); }
+    .photo-frame span { font-size: 0.8rem; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); padding: 0.3rem 0.8rem; border-radius: 40px; color: white; font-family: 'Instrument Sans', sans-serif; }
+    .hero-content { flex: 2; min-width: 260px; text-align: center; }
+    @media (max-width: 768px) { .hero-container { flex-direction: column; text-align: center; } .hero-photo { margin-bottom: 1rem; } .hero-content { text-align: center; } }
+    .photo-frame:hover { transform: scale(1.02); border-color: var(--primary-color, #7c3aed); box-shadow: 0 25px 40px rgba(0,0,0,0.2); }
+    [data-theme="dark"] .photo-frame { border-color: rgba(255,255,255,0.2); background: rgba(20,20,30,0.5); }
+    [data-theme="dark"] .photo-frame i { color: #ccc; }
   </style>
 </head>
 
@@ -102,9 +35,25 @@
   <nav class="glass-nav">
     <div class="logo">GA.</div>
     <div class="nav-links">
-      <a href="#inicio">Inicio</a>
-      <a href="#sobre-mi">Sobre Mí</a>
-      <a href="#experiencia">Proyectos</a>
+      <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
+      <a href="#sobre-mi" data-i18n="nav.sobre_mi">Sobre Mí</a>
+      <a href="#experiencia" data-i18n="nav.proyectos">Proyectos</a>
+
+      <!-- Selector de idioma -->
+      <select id="languageSelector" class="language-select" aria-label="Seleccionar idioma">
+        <option value="es">🇪🇸 Español</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="ja">🇯🇵 日本語</option>
+      </select>
+
+      <!-- Selector de estilos -->
+      <div class="style-picker">
+        <button class="style-dot" data-style="flat" title="Flat (Fluent UI)" aria-label="Estilo Flat"></button>
+        <button class="style-dot" data-style="retro" title="Retrofuturista" aria-label="Estilo Retrofuturista"></button>
+        <button class="style-dot" data-style="minimal" title="Minimalista" aria-label="Estilo Minimalista"></button>
+        <button class="style-dot" data-style="bauhaus" title="Bauhaus" aria-label="Estilo Bauhaus"></button>
+      </div>
+
       <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
         <i class="ri-moon-line"></i>
       </button>
@@ -112,68 +61,56 @@
   </nav>
 
   <main>
-    <!-- Hero con foto a la izquierda -->
-    <section id="inicio" class="hero reveal">
+    <!-- Hero -->
+    <section id="inicio" class="hero">
       <div class="hero-container">
-        <!-- Espacio para tu foto (lado izquierdo) -->
         <div class="hero-photo">
           <div class="photo-frame">
-            <!-- Aquí puedes reemplazar el ícono y texto por tu foto real -->
             <div style="display: flex; flex-direction: column; align-items: center;">
               <i class="ri-user-line"></i>
-              <span>Tu foto</span>
+              <span data-i18n="hero.photo_placeholder">Tu foto</span>
             </div>
-            <!-- Ejemplo para cuando tengas imagen:
-            <img src="ruta-de-tu-foto.jpg" alt="Gamaliel Armenta" style="width:100%; height:100%; object-fit:cover;"> -->
           </div>
         </div>
 
-        <!-- Contenido textual (derecha) -->
         <div class="hero-content">
-          <div class="fluent-badge">Ingeniero en Software & UI/UX</div>
-          <h1>Gamaliel <br><span class="gradient-text">Armenta Pérez</span></h1>
+          <div class="fluent-badge" data-i18n="hero.badge">Ingeniero en Software & UI/UX</div>
+          <h1 data-i18n="hero.titulo"><span class="gradient-text">Gamaliel Armenta Pérez</span></h1>
           <div class="glass-card hero-card">
-            <p>Ingeniero en Software enfocado en el Diseño UI/UX y la innovación educativa a través de la tecnología. Mi objetivo es aplicar el pensamiento crítico y el diseño centrado en el usuario para construir las herramientas digitales del futuro, optimizando flujos de trabajo mediante el uso estratégico de Inteligencia Artificial.</p>
+            <p data-i18n="hero.descripcion">Ingeniero en Software enfocado en el Diseño UI/UX y la innovación educativa a través de la tecnología. Mi objetivo es aplicar el pensamiento crítico y el diseño centrado en el usuario para construir las herramientas digitales del futuro, optimizando flujos de trabajo mediante el uso estratégico de Inteligencia Artificial.</p>
           </div>
           <div class="contact-links">
-            <a href="mailto:armentaperezgamaliel@gmail.com" class="fluent-btn"><i class="ri-mail-line"></i> Email</a>
-            <a href="https://linkedin.com/in/gamaliel-armenta-perez-4bb998277" target="_blank" class="fluent-btn"><i class="ri-linkedin-line"></i> LinkedIn</a>
-            <a href="https://github.com/gamaliel-armenta" target="_blank" class="fluent-btn"><i class="ri-github-line"></i> GitHub</a>
-            <span class="location-badge"><i class="ri-map-pin-line"></i> Ciudad Obregón, Sonora</span>
+            <a href="mailto:armentaperezgamaliel@gmail.com" class="fluent-btn" data-i18n="hero.email"><i class="ri-mail-line"></i> Email</a>
+            <a href="https://linkedin.com/in/gamaliel-armenta-perez-4bb998277" target="_blank" class="fluent-btn" data-i18n="hero.linkedin"><i class="ri-linkedin-line"></i> LinkedIn</a>
+            <a href="https://github.com/gamaliel-armenta" target="_blank" class="fluent-btn" data-i18n="hero.github"><i class="ri-github-line"></i> GitHub</a>
+            <span class="location-badge"><i class="ri-map-pin-line"></i> <span data-i18n="hero.location">Ciudad Obregón, Sonora</span></span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Sobre mí -->
-    <section id="sobre-mi" class="about-section reveal">
-      <h2>Conoce un poco más de mí</h2>
+    <section id="sobre-mi" class="about-section">
+      <h2 data-i18n="sobre_mi.titulo">Conoce un poco más de mí</h2>
       <div class="about-grid">
         <div class="glass-card">
-          <h3>El puente entre el Diseño y el Código</h3>
-          <p>Como Ingeniero en Software, mi gran habilidad es que no solo diseño pantallas atractivas, sino que entiendo la estructura y viabilidad detrás de ellas. Esto me permite crear interfaces de usuario funcionales, accesibles y fáciles de implementar.</p>
-          <p><strong>Dato curioso:</strong> en mi tiempo libre me dedico a la producción musical. Aprendo ritmo, composición y armonía; principios que aplico para crear "armonía visual" en UX.</p>
+          <h3 data-i18n="sobre_mi.card1_titulo">El puente entre el Diseño y el Código</h3>
+          <p data-i18n="sobre_mi.card1_texto">Como Ingeniero en Software, mi gran habilidad es que no solo diseño pantallas atractivas, sino que entiendo la estructura y viabilidad detrás de ellas. Esto me permite crear interfaces de usuario funcionales, accesibles y fáciles de implementar.</p>
+          <p data-i18n="sobre_mi.card1_curiosidad"><strong>Dato curioso:</strong> en mi tiempo libre me dedico a la producción musical. Aprendo ritmo, composición y armonía; principios que aplico para crear "armonía visual" en UX.</p>
         </div>
         <div class="glass-card">
-          <h3>Mi Stack de Herramientas</h3>
-          <p>Perfil multidisciplinario que se adapta a diferentes etapas del ciclo de vida del producto:</p>
-          <div class="badge-group">
-            <span class="fluent-badge">Figma</span>
-            <span class="fluent-badge">Diseño UI/UX</span>
-            <span class="fluent-badge">Prototipado</span>
-            <span class="fluent-badge">Sistemas de Diseño</span>
-            <span class="fluent-badge">User Research</span>
-            <span class="fluent-badge dev-badge">HTML/CSS/JS</span>
-            <span class="fluent-badge dev-badge">Frontend</span>
-            <span class="fluent-badge dev-badge">Git/GitHub</span>
+          <h3 data-i18n="sobre_mi.card2_titulo">Mi Stack de Herramientas</h3>
+          <p data-i18n="sobre_mi.card2_texto">Perfil multidisciplinario que se adapta a diferentes etapas del ciclo de vida del producto:</p>
+          <div class="badge-group" id="badge-container">
+            <!-- Los badges se generarán desde JavaScript -->
           </div>
         </div>
       </div>
     </section>
 
     <!-- Proyectos -->
-    <section id="experiencia" class="reveal">
-      <h2>Proyectos Tecnológicos</h2>
+    <section id="experiencia">
+      <h2 data-i18n="proyectos.titulo">Proyectos Tecnológicos</h2>
       <div id="tabs-container" class="tabs-bar"></div>
       <div id="projects-container" class="grid"></div>
     </section>
@@ -194,13 +131,9 @@
   </div>
 
   <footer class="glass-footer">
-    <p>© 2026 Gamaliel Armenta Pérez</p>
+    <p data-i18n="footer">© 2026 Gamaliel Armenta Pérez</p>
   </footer>
 
-  <!-- Scripts: GSAP, Lenis, ScrollTrigger -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -115,14 +115,15 @@
     margin: 40px 0;
 }
 
+/* case-studies.css */
 .gallery-main {
-    margin-bottom: 20px;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-fluent);
+  margin-bottom: 20px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--glass-bg);
+  /* eliminamos backdrop-filter y -webkit-backdrop-filter */
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-fluent);
 }
 
 .gallery-main img {
@@ -148,15 +149,13 @@
 }
 
 .thumbnail:hover {
-    transform: translateY(-4px);
-    opacity: 1;
+  opacity: 1;
+  /* sin transform */
 }
-
 .thumbnail.active {
-    opacity: 1;
-    transform: scale(1.02);
+  opacity: 1;
+  /* sin transform */
 }
-
 .thumbnail img {
     width: 100%;
     height: 80px;

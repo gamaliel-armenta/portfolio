@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glaze | Caso de Estudio UI/UX</title>
+    <title data-i18n="case_glaze.title">Glaze | Caso de Estudio UI/UX</title>
     <!-- Fuentes y iconos -->
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Tipografías adicionales para demostración (contenido) -->
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
-    <!-- CSS modulares -->
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/utilities.css">
-    <link rel="stylesheet" href="../css/case-studies.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;800&family=Fuzzy+Bubbles:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         @font-face {
@@ -24,13 +17,10 @@
             font-style: normal;
         }
     </style>
-    <!-- Estilos modulares -->
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/utilities.css">
-    <!-- Estilos comunes para casos de estudio -->
-    <link rel="stylesheet" href="case-common.css">
+    <!-- CSS modulares -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/case-studies.css">
+    <link rel="stylesheet" href="../css/themes.css">
 </head>
 <body data-theme="dark">
 
@@ -42,54 +32,70 @@
     <nav class="glass-nav">
         <div class="logo">GA.</div>
         <div class="nav-links">
-            <a href="../index.html" class="fluent-btn" style="padding: 8px 16px;"><i class="ri-arrow-left-line"></i> Volver</a>
+            <a href="../index.html" class="fluent-btn" style="padding: 8px 16px;"><i class="ri-arrow-left-line"></i> <span data-i18n="nav.volver">Volver</span></a>
+
+            <!-- Selector de idioma -->
+            <select id="languageSelector" class="language-select" aria-label="Seleccionar idioma">
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+
+            <!-- Selector de estilos -->
+            <div class="style-picker">
+                <button class="style-dot" data-style="flat" title="Flat (Fluent UI)" aria-label="Estilo Flat"></button>
+                <button class="style-dot" data-style="retro" title="Retrofuturista" aria-label="Estilo Retrofuturista"></button>
+                <button class="style-dot" data-style="minimal" title="Minimalista" aria-label="Estilo Minimalista"></button>
+                <button class="style-dot" data-style="bauhaus" title="Bauhaus" aria-label="Estilo Bauhaus"></button>
+            </div>
+
             <button id="themeToggle" class="theme-btn"><i class="ri-moon-line"></i></button>
         </div>
     </nav>
 
     <main style="padding-top: 60px; padding-bottom: 60px;">
         <header class="case-hero">
-            <div class="fluent-badge">Caso de Estudio UX/UI</div>
-            <h1 class="case-title gradient-text">Glaze</h1>
-            <p style="color: var(--text-dim); font-size: 1.4rem; max-width: 650px; margin: 0 auto;">
+            <div class="fluent-badge" data-i18n="case_glaze.badge">Caso de Estudio UX/UI</div>
+            <h1 class="case-title gradient-text" data-i18n="case_glaze.heading">Glaze</h1>
+            <p style="color: var(--text-dim); font-size: 1.4rem; max-width: 650px; margin: 0 auto;" data-i18n="case_glaze.subtitle">
                 Diversión segura para los niños y facilidad para los tutores.
             </p>
         </header>
 
         <article class="case-body">
             <div class="case-meta-grid">
-                <div class="meta-item"><h4>Rol</h4><p>UI/UX Designer</p></div>
-                <div class="meta-item"><h4>Herramientas</h4><p>Figma, IA Generativa</p></div>
-                <div class="meta-item"><h4>Duración</h4><p>Ene 2025 - May 2025</p></div>
-                <div class="meta-item"><h4>Plataforma</h4><p>Mobile App (iOS & Android)</p></div>
+                <div class="meta-item"><h4 data-i18n="case_glaze.meta.role_label">Rol</h4><p data-i18n="case_glaze.meta.role">UI/UX Designer</p></div>
+                <div class="meta-item"><h4 data-i18n="case_glaze.meta.tools_label">Herramientas</h4><p data-i18n="case_glaze.meta.tools">Figma, IA Generativa</p></div>
+                <div class="meta-item"><h4 data-i18n="case_glaze.meta.duration_label">Duración</h4><p data-i18n="case_glaze.meta.duration">Ene 2025 - May 2025</p></div>
+                <div class="meta-item"><h4 data-i18n="case_glaze.meta.platform_label">Plataforma</h4><p data-i18n="case_glaze.meta.platform">Mobile App (iOS & Android)</p></div>
             </div>
 
-            <h2>1. Contexto y Problema</h2>
-            <p>El acceso temprano de los niños a dispositivos móviles ha creado una brecha entre la exploración digital y la seguridad, así mismo el acceso a contenido que no es apto para sus edades puede propiciar cambios de comportamiento afectando a otros niños o incluso en su dinámica familiar. Durante la fase de empatía, conversé con padres de familia que expresaron una preocupación constante: el software de control parental actual es demasiado invasivo, difícil de configurar o carece de una interfaz amigable para el niño que está usando el dispositivo.</p>
-            <p>El desafío principal fue diseñar una sola aplicación capaz de adaptarse dinámicamente a dos usuarios completamente distintos en el mismo dispositivo sin sacrificar la experiencia de usuario.</p>
+            <h2 data-i18n="case_glaze.section1">1. Contexto y Problema</h2>
+            <p data-i18n="case_glaze.section1_text">El acceso temprano de los niños a dispositivos móviles ha creado una brecha entre la exploración digital y la seguridad, así mismo el acceso a contenido que no es apto para sus edades puede propiciar cambios de comportamiento afectando a otros niños o incluso en su dinámica familiar. Durante la fase de empatía, conversé con padres de familia que expresaron una preocupación constante: el software de control parental actual es demasiado invasivo, difícil de configurar o carece de una interfaz amigable para el niño que está usando el dispositivo.</p>
+            <p data-i18n="case_glaze.section1_text2">El desafío principal fue diseñar una sola aplicación capaz de adaptarse dinámicamente a dos usuarios completamente distintos en el mismo dispositivo sin sacrificar la experiencia de usuario.</p>
 
-            <blockquote class="quote-block">
+            <blockquote class="quote-block" data-i18n="case_glaze.section1_quote">
                 "Mi hijo se pone violento y le dijo a su maestra (de preescolar) que la iba a matar."
             </blockquote>
 
-            <h2>2. Investigación y Definición de User Personas</h2>
-            <p>Para abordar el problema, la arquitectura de la información se dividió basándose en dos <i>User Personas</i> principales:</p>
+            <h2 data-i18n="case_glaze.section2">2. Investigación y Definición de User Personas</h2>
+            <p data-i18n="case_glaze.section2_text">Para abordar el problema, la arquitectura de la información se dividió basándose en dos <i>User Personas</i> principales:</p>
             <ul>
-                <li><strong>El Niño:</strong> Requiere una interfaz altamente visual, estímulos positivos, navegación basada en iconos grandes y ausencia total de menús de configuración complejos. Su entorno debe ser un "jardín cercado" seguro.</li>
-                <li><strong>El Tutor:</strong> Necesita métricas claras (tiempo de pantalla), interruptores rápidos para bloquear/desbloquear aplicaciones, historial de actividad y notificaciones en tiempo real sobre intentos de acceso a contenido restringido.</li>
+                <li data-i18n="case_glaze.section2_list_0"><strong>El Niño:</strong> Requiere una interfaz altamente visual, estímulos positivos, navegación basada en iconos grandes y ausencia total de menús de configuración complejos. Su entorno debe ser un "jardín cercado" seguro.</li>
+                <li data-i18n="case_glaze.section2_list_1"><strong>El Tutor:</strong> Necesita métricas claras (tiempo de pantalla), interruptores rápidos para bloquear/desbloquear aplicaciones, historial de actividad y notificaciones en tiempo real sobre intentos de acceso a contenido restringido.</li>
             </ul>
         </article>
 
         <article class="case-body">
-            <h2>3. Sistema de Diseño Adaptativo</h2>
-            <p>Implementé un sistema de diseño bifásico. Para la <strong>vista del tutor</strong>, mantuvimos una estética profesional, oscura y analítica. Para la <strong>vista del niño</strong>, los acentos de color se adaptan a un esquema más vibrante y lúdico.</p>
+            <h2 data-i18n="case_glaze.section3">3. Sistema de Diseño Adaptativo</h2>
+            <p data-i18n="case_glaze.section3_text">Implementé un sistema de diseño bifásico. Para la <strong>vista del tutor</strong>, mantuvimos una estética profesional, oscura y analítica. Para la <strong>vista del niño</strong>, los acentos de color se adaptan a un esquema más vibrante y lúdico.</p>
 
             <div class="design-system-preview">
                 <div class="glass-card design-card">
-                    <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;">Paleta de Colores</h4>
-                    
+                    <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;" data-i18n="case_glaze.section3_palette_title">Paleta de Colores</h4>
+
                     <div style="margin-bottom: 30px;">
-                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;">Vista del Niño</h4>
+                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" data-i18n="case_glaze.section3_palette.kid_title">Vista del Niño</h4>
                         <div style="display: flex; gap: 12px;">
                             <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #23B0A7; box-shadow: var(--glass-shadow);" title="Teal lúdico"></div>
                             <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #30E642; box-shadow: var(--glass-shadow);" title="Verde vibrante"></div>
@@ -99,7 +105,7 @@
                     </div>
 
                     <div>
-                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;">Vista del Tutor</h4>
+                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 1px;" data-i18n="case_glaze.section3_palette.tutor_title">Vista del Tutor</h4>
                         <div style="display: flex; gap: 12px;">
                             <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #363A39; box-shadow: var(--glass-shadow);" title="Neutral Dark"></div>
                             <div style="width: 45px; height: 45px; border-radius: 12px; background-color: #8D0733; box-shadow: var(--glass-shadow);" title="Deep Red"></div>
@@ -110,17 +116,17 @@
                 </div>
 
                 <div class="glass-card design-card">
-                    <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;">Tipografías</h4>
-                    
+                    <h4 style="color: var(--primary); margin-bottom: 25px; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;" data-i18n="case_glaze.section3_typography_title">Tipografías</h4>
+
                     <div style="margin-bottom: 25px; border-bottom: 1px solid var(--glass-border); padding-bottom: 20px;">
-                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;">Vista del Niño</h4>
-                        
+                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;" data-i18n="case_glaze.section3_typography.kid_title">Vista del Niño</h4>
+
                         <div style="margin-bottom: 10px;">
                             <h2 style="font-family: 'Fuzzy Bubbles', sans-serif; margin-bottom: 2px; font-weight: 700; font-size: 1.4rem; color: var(--text-main);">Fuzzy Bubbles</h2>
                             <p style="font-family: 'Fuzzy Bubbles'; color: var(--text-dim); font-size: 0.85rem;">Aa Bb Cc Dd Ee Ff Gg</p>
                             <p style="font-family: 'Fuzzy Bubbles'; color: var(--text-dim); font-size: 0.85rem;">0 1 2 3 4 5 6 7 8 9</p>
                         </div>
-                        
+
                         <div>
                             <h2 style="font-family: 'BM HANNA', sans-serif; margin-bottom: 2px; font-weight: 400; font-size: 1.4rem; color: var(--text-main);">BM HANNA</h2>
                             <p style="font-family: 'BM HANNA'; color: var(--text-dim); font-size: 0.85rem;">Aa Bb Cc Dd Ee Ff Gg</p>
@@ -129,7 +135,7 @@
                     </div>
 
                     <div>
-                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0px; letter-spacing: 1px;">Vista del Tutor</h4>
+                        <h4 class="meta-item" style="color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0px; letter-spacing: 1px;" data-i18n="case_glaze.section3_typography.tutor_title">Vista del Tutor</h4>
                         <div>
                             <h2 style="font-family: 'Comfortaa', sans-serif; margin-bottom: 2px; font-weight: 600; font-size: 1.4rem; color: var(--text-main);">Comfortaa</h2>
                             <p style="font-family: 'Comfortaa'; color: var(--text-dim); font-size: 0.85rem;">Aa Bb Cc Dd Ee Ff Gg</p>
@@ -138,33 +144,32 @@
                     </div>
                 </div>
             </div>
-            
-            <h2>4. Prototipado y Contraste de Vistas</h2>
-            <p>El prototipo de alta fidelidad demuestra cómo la misma aplicación transforma su arquitectura de la información dependiendo del usuario logueado. Mientras el tutor tiene un panel de control jerárquico, el niño experimenta un carrusel inmersivo de aplicaciones y contenidos aprobados.</p>
+
+            <h2 data-i18n="case_glaze.section4">4. Prototipado y Contraste de Vistas</h2>
+            <p data-i18n="case_glaze.section4_text">El prototipo de alta fidelidad demuestra cómo la misma aplicación transforma su arquitectura de la información dependiendo del usuario logueado. Mientras el tutor tiene un panel de control jerárquico, el niño experimenta un carrusel inmersivo de aplicaciones y contenidos aprobados.</p>
 
             <div class="comparison-grid">
                 <div class="glass-card" style="padding: 20px; display: flex; flex-direction: column; border: 1px solid var(--primary); box-shadow: 0 0 25px rgba(79, 70, 229, 0.15);">
-                    <h4 style="color: var(--primary); text-align: center; margin-bottom: 15px; font-weight: 800;">Vista del desarrollo de Glaze</h4>
+                    <h4 style="color: var(--primary); text-align: center; margin-bottom: 15px; font-weight: 800;" data-i18n="case_glaze.section4_card_title">Vista del desarrollo de Glaze</h4>
                     <div class="comparison-img-wrapper" style="border: none;">
-                        <video autoplay loop muted playsinline class="mockup-video">
+                        <video controls muted playsinline poster="../assets/img/poster-glaze.jpg" class="mockup-video">
                             <source src="../assets/img/Glaze-Proceso.mp4" type="video/mp4">
-                            Tu navegador no soporta el formato de video.
                         </video>
                     </div>
                 </div>
             </div>
 
-            <h2 style="margin-top: 60px;">5. Conclusiones y Pruebas de Usabilidad</h2>
-            <p>Se realizaron pruebas con 5 familias. El diseño dual demostró ser un éxito moderado: <strong>redujo el tiempo de configuración inicial por parte de los padres en un 45%</strong> comparado con aplicaciones de la competencia. Por su parte, los niños (edades 6-9) pudieron navegar hacia sus juegos sin frustración y sin poder vulnerar el <i>sandbox</i> de seguridad.</p>
-            
+            <h2 style="margin-top: 60px;" data-i18n="case_glaze.section5">5. Conclusiones y Pruebas de Usabilidad</h2>
+            <p data-i18n="case_glaze.section5_text">Se realizaron pruebas con 5 familias. El diseño dual demostró ser un éxito moderado: <strong>redujo el tiempo de configuración inicial por parte de los padres en un 45%</strong> comparado con aplicaciones de la competencia. Por su parte, los niños (edades 6-9) pudieron navegar hacia sus juegos sin frustración y sin poder vulnerar el <i>sandbox</i> de seguridad.</p>
+
             <div style="text-align: center; margin-top: 80px;">
-                <a href="../index.html" class="fluent-btn" style="padding: 15px 35px; font-size: 1.1rem;">Ver otros proyectos</a>
+                <a href="../index.html" class="fluent-btn" style="padding: 15px 35px; font-size: 1.1rem;" data-i18n="case_glaze.button">Ver otros proyectos</a>
             </div>
         </article>
     </main>
 
     <footer class="glass-footer" style="margin-top: 50px;">
-        <p>© 2026 Gamaliel Armenta Pérez</p>
+        <p data-i18n="footer">© 2026 Gamaliel Armenta Pérez</p>
     </footer>
 
     <div id="imageModal" class="image-modal">
@@ -172,12 +177,6 @@
         <img class="image-modal-img" id="imgDentroDelModal" src="" alt="Vista ampliada">
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script type="module">
-        import { initTheme } from '../js/modules/theme.js';
-        import { initLightbox } from '../js/modules/lightbox.js';
-        initTheme();
-        initLightbox();
-    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

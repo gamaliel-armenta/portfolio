@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="error404.title">Página no encontrada | Gamaliel Armenta</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Estilos modulares -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <style>
+    /* Estilos específicos para la página 404 */
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .error-icon {
+      font-size: 8rem;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      opacity: 0.6;
+    }
+    .error-code {
+      font-size: 6rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    .error-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .error-description {
+      max-width: 500px;
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .error-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 2rem;
+      border-radius: var(--radius-md);
+      background: var(--primary-gradient);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-fluent);
+      border: none;
+      cursor: pointer;
+    }
+    .error-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+    }
+    /* Responsive */
+    @media (max-width: 640px) {
+      .error-icon { font-size: 5rem; }
+      .error-code { font-size: 4rem; }
+      .error-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+  <div class="liquid-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <nav class="glass-nav">
+    <div class="logo">GA.</div>
+    <div class="nav-links">
+      <a href="/" data-i18n="nav.inicio">Inicio</a>
+      <a href="/#sobre-mi" data-i18n="nav.sobre_mi">Sobre Mí</a>
+      <a href="/#experiencia" data-i18n="nav.proyectos">Proyectos</a>
+
+      <!-- Selector de idioma -->
+      <select id="languageSelector" class="language-select" aria-label="Seleccionar idioma">
+        <option value="es">🇪🇸 Español</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="ja">🇯🇵 日本語</option>
+      </select>
+
+      <!-- Selector de estilos -->
+      <div class="style-picker">
+        <button class="style-dot" data-style="flat" title="Flat (Fluent UI)" aria-label="Estilo Flat"></button>
+        <button class="style-dot" data-style="retro" title="Retrofuturista" aria-label="Estilo Retrofuturista"></button>
+        <button class="style-dot" data-style="minimal" title="Minimalista" aria-label="Estilo Minimalista"></button>
+        <button class="style-dot" data-style="bauhaus" title="Bauhaus" aria-label="Estilo Bauhaus"></button>
+      </div>
+
+      <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+        <i class="ri-moon-line"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="error-container">
+      <div class="error-icon">🔍</div>
+      <div class="error-code">404</div>
+      <h1 class="error-title" data-i18n="error404.heading">Página no encontrada</h1>
+      <p class="error-description" data-i18n="error404.description">
+        Lo sentimos, la página que buscas no existe o ha sido movida.
+      </p>
+      <a href="/" class="error-btn" data-i18n="error404.button">
+        <i class="ri-arrow-left-line"></i> Volver al inicio
+      </a>
+    </section>
+  </main>
+
+  <footer class="glass-footer">
+    <p data-i18n="footer">© 2026 Gamaliel Armenta Pérez</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
